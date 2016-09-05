@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 import urllib
 
@@ -25,17 +26,17 @@ def getName(html):
 
     return [match.group(1) for match in matchs]
 
-html1 = getHtml("https://www.douban.com/doulist/164439/?start=0&sort=time&sub_type=")
-html2 = getHtml("https://www.douban.com/doulist/164439/?start=25&sort=time&sub_type=")
-html3 = getHtml("https://www.douban.com/doulist/164439/?start=50&sort=time&sub_type=")
+html1 = getHtml("https://ssearch.oreilly.com/?i=1;page=13;q=O%27Reilly+Media;q1=Books;x=0;x1=t1;y=0&act=pg_13")
+html2 = getHtml("https://ssearch.oreilly.com/?i=1;page=13;q=O%27Reilly+Media;q1=Books;x=0;x1=t1;y=0&act=pg_13")
+html3 = getHtml("https://ssearch.oreilly.com/?i=1;page=13;q=O%27Reilly+Media;q1=Books;x=0;x1=t1;y=0&act=pg_13")
 
 name1 = getName(html1)
 name2 = getName(html2)
 name3 = getName(html3)
 
-name1 = [name.strip() for name in name1 if name.find('        ') != -1 and name.find('<') == -1]
-name2 = [name.strip() for name in name2 if name.find('        ') != -1 and name.find('<') == -1]
-name3 = [name.strip() for name in name3 if name.find('        ') != -1 and name.find('<') == -1]
+#name1 = [name.strip() for name in name1 if name.find('        ') != -1 and name.find('<') == -1]
+#name2 = [name.strip() for name in name2 if name.find('        ') != -1 and name.find('<') == -1]
+#name3 = [name.strip() for name in name3 if name.find('        ') != -1 and name.find('<') == -1]
 
 im1,index = getImg(html1,1,name1)
 im2,index = getImg(html2,index,name2)
