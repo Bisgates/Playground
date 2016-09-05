@@ -1,5 +1,5 @@
 {
-    "name": "Popup ",
+    "name": "Udacity-Android Nanodegree tool",
     "manifest_version": 2,
     "version": "0.1",
     "description": "Run process on page activated by click in extension popup",
