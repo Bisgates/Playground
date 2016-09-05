@@ -16,5 +16,5 @@ function clickHandler(e) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('click-me').addEventListener(clickHandler);
+    document.addEventListener("click",clickHandler);
 });
